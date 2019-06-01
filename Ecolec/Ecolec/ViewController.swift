@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import SwiftyJSON
 
 class ViewController: UIViewController {
 
@@ -55,35 +56,39 @@ class ViewController: UIViewController {
     func fetchRoute(from source: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D) {
         
         let session = URLSession.shared
-        
-        let url = URL(string: "http://maps.googleapis.com/maps/api/directions/json?origin=\(source.latitude),\(source.longitude)&destination=\(destination.latitude),\(destination.longitude)&sensor=false&mode=driving&key=AIzaSyCNdN_RVfg_3Gm_GHAGFlmqOW1FBpWOzWc")!
+    
+        let url = URL(string: "https://maps.googleapis.com/maps/api/directions/json?origin=-12.1354657,-77.02224&destination=\(destination.latitude),\(destination.longitude)&mode=walking&key=AIzaSyDCK9g4uqPTkM_-BPKAZfvK2BPF7wsoLJM")!
+        print(url)
         
         let task = session.dataTask(with: url, completionHandler: {
             (data, response, error) in
             
-            guard error == nil else {
+            guard error == nil, let data = data else {
                 print(error!.localizedDescription)
                 return
             }
+            let json = JSON(data)
+            print(json)
             
-            guard let jsonResult = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any], let jsonResponse = jsonResult else {
+            guard let jsonResult = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any], let jsonResponse = jsonResult else {
                 print("error in JSONSerialization")
                 return
             }
-            
+
             guard let routes = jsonResponse["routes"] as? [Any] else {
                 return
             }
-            
+            print(routes)
+
             if routes.count > 0 {
                 guard let route = routes[0] as? [String: Any] else {
                     return
                 }
-                
+
                 guard let overview_polyline = route["overview_polyline"] as? [String: Any] else {
                     return
                 }
-                
+
                 guard let polyLineString = overview_polyline["points"] as? String else {
                     return
                 }
@@ -110,11 +115,12 @@ class ViewController: UIViewController {
 
 extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.last
-        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 17.0)
-        fetchRoute(from: (location?.coordinate)!, to: CLLocationCoordinate2D.init(latitude: -12.177010, longitude: -76.993988))
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        let camera = GMSCameraPosition.camera(withLatitude: locValue.latitude, longitude: locValue.longitude, zoom: 17.0)
+        print(locValue)
+        fetchRoute(from: locValue, to: CLLocationCoordinate2D.init(latitude: -12.134820, longitude: -77.017359))
         self.mapView?.animate(to: camera)
-        //Finally stop updating location otherwise it will come again and again in this delegate
+        
         self.locationManager.stopUpdatingLocation()
     }
 }

@@ -115,6 +115,7 @@
 				37AFEB8522A2C8DF00E41FE2 /* Frameworks */,
 				37AFEB8622A2C8DF00E41FE2 /* Resources */,
 				5360113903A4979F90C4F793 /* [CP] Copy Pods Resources */,
+				9B993DEC3F90B5911AC99556 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +197,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ecolec/Pods-Ecolec-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B993DEC3F90B5911AC99556 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Ecolec/Pods-Ecolec-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ecolec/Pods-Ecolec-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A703D3BDF133945EE0B7AEE7 /* [CP] Check Pods Manifest.lock */ = {
