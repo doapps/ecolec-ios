@@ -201,7 +201,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Ecolec/Pods-Ecolec-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Ecolec/Pods-Ecolec-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
@@ -214,7 +214,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ecolec/Pods-Ecolec-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ecolec/Pods-Ecolec-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9B993DEC3F90B5911AC99556 /* [CP] Embed Pods Frameworks */ = {
@@ -225,7 +225,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Ecolec/Pods-Ecolec-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Ecolec/Pods-Ecolec-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -238,7 +238,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ecolec/Pods-Ecolec-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ecolec/Pods-Ecolec-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A703D3BDF133945EE0B7AEE7 /* [CP] Check Pods Manifest.lock */ = {
