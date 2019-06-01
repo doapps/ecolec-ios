@@ -14,6 +14,8 @@
 		37AFEB9622A2C8E100E41FE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AFEB9422A2C8E100E41FE2 /* LaunchScreen.storyboard */; };
 		37B1577222A2D66E007E55D9 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B1577122A2D66E007E55D9 /* Authentication.storyboard */; };
 		37B1577422A2D691007E55D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1577322A2D691007E55D9 /* LoginViewController.swift */; };
+		37FD224A22A2DB7700FD825E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FD224922A2DB7700FD825E /* Register.storyboard */; };
+		37FD224C22A2DB8400FD825E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD224B22A2DB8400FD825E /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		37AFEB9722A2C8E100E41FE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37B1577122A2D66E007E55D9 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		37B1577322A2D691007E55D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		37FD224922A2DB7700FD825E /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		37FD224B22A2DB8400FD825E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				37AFEB9722A2C8E100E41FE2 /* Info.plist */,
 				37B1577122A2D66E007E55D9 /* Authentication.storyboard */,
 				37B1577322A2D691007E55D9 /* LoginViewController.swift */,
+				37FD224922A2DB7700FD825E /* Register.storyboard */,
+				37FD224B22A2DB8400FD825E /* RegisterViewController.swift */,
 			);
 			path = Ecolec;
 			sourceTree = "<group>";
@@ -132,6 +138,7 @@
 				37AFEB9622A2C8E100E41FE2 /* LaunchScreen.storyboard in Resources */,
 				37AFEB9322A2C8E100E41FE2 /* Assets.xcassets in Resources */,
 				37AFEB9122A2C8E000E41FE2 /* Main.storyboard in Resources */,
+				37FD224A22A2DB7700FD825E /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +152,7 @@
 				37B1577422A2D691007E55D9 /* LoginViewController.swift in Sources */,
 				37AFEB8E22A2C8DF00E41FE2 /* ViewController.swift in Sources */,
 				37AFEB8C22A2C8DF00E41FE2 /* AppDelegate.swift in Sources */,
+				37FD224C22A2DB8400FD825E /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
