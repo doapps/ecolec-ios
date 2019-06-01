@@ -8,15 +8,65 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        if #available(iOS 10.0, *) {
+            // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter.current().delegate = self
+            
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+        }
+        
+        application.registerForRemoteNotifications()
+        
+        InstanceID.instanceID().instanceID { (result, error) in
+            if let error = error {
+                print("Error fetching remote instance ID: \(error)")
+            } else if let result = result {
+                print("Remote instance ID token: \(result.token)")
+            }
+        }
+        
+        Messaging.messaging().delegate = self
+        
+        if let idUser = UserDefaults.standard.object(forKey: "idUser") as? Int {
+            let homevc = UIStoryboard(name: "Main", bundle: nil ).instantiateInitialViewController()
+            self.window?.rootViewController = homevc
+            Data.share.idUser  = idUser
+        }else {
+            let homevc = UIStoryboard(name: "Authentication", bundle: nil ).instantiateInitialViewController()
+            self.window?.rootViewController = homevc
+        }
+        
+        
         return GMSServices.provideAPIKey("AIzaSyCNdN_RVfg_3Gm_GHAGFlmqOW1FBpWOzWc")
+    }
+    
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        let dataDict:[String: String] = ["token": fcmToken]
+        NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+        Messaging.messaging().subscribe(toTopic: "ecolec") { error in
+            print("Subscribed to weather topic")
+        }
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print(userInfo)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

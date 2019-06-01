@@ -69,13 +69,18 @@ class ViewController: UIViewController {
         alertView.isHidden = true
         mapView.clear()
         let marker = GMSMarker(position: coordinates!)
+        marker.icon = UIImage(named: "ic_marker")
         marker.map = mapView
+        
+        
         fetchRoute(from: CLLocationCoordinate2D(latitude: 0, longitude: 0), to: CLLocationCoordinate2D(latitude: coordinates?.latitude ?? 0, longitude: coordinates?.longitude ?? 0))
         let params = ["id": Data.share.idUser!,
                       "publicacion_id": publicID!,
                       "latitude": 121.1221,
                       "longitude": 12.2111] as [String : Any]
+        
         Alamofire.request("http://api.sandbox.doapps.pe/ecolec/recolector/aceptar-recojo", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
+            print(params)
             switch response.result {
             case .success:
                 let data = JSON(response.data!)
@@ -141,6 +146,7 @@ class ViewController: UIViewController {
         polyline.strokeWidth = 3.0
         polyline.map = mapView // Google MapView
         let marker = GMSMarker(position: coordinates)
+        marker.icon = UIImage(named: "ic_marker")
         marker.map = mapView
     }
     
@@ -188,6 +194,7 @@ class ViewController: UIViewController {
                 self.points = Points.from(jsonArray: data.arrayValue)
                 self.points.forEach({
                     let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: $0.latitudCiudadano, longitude: $0.longitudCiudadano))
+                    marker.icon = UIImage(named: "ic_marker")
                     marker.map = self.mapView
                     self.pointsDict[marker] = $0
                 })

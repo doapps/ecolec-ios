@@ -25,24 +25,27 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func openHome(_ sender: UITapGestureRecognizer) {
-        print("sadasd")
-        let params = ["email": dniTextField.text ?? "nico@gmail.com",
-                      "password": passwordTextField.text ?? "nico123"]
-        Alamofire.request("http://api.sandbox.doapps.pe/ecolec/recolector/login", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
-            switch response.result {
-            case .success:
+        if !dniTextField.text!.isEmpty, !passwordTextField.text!.isEmpty {
+            let params = ["email": dniTextField.text!,
+                         "password": passwordTextField.text!]
+                Alamofire.request("http://api.sandbox.doapps.pe/ecolec/recolector/login", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
+                switch response.result {
+                case .success:
                 let data = JSON(response.data!)
                 print(data)
                 Data.share.idUser = data["id"].intValue
+                UserDefaults.standard.set(data["id"].intValue, forKey: "idUser")
                 DispatchQueue.main.async {
-                    let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
-                    self.present(homeVC!, animated: true)
+                let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+                self.present(homeVC!, animated: true)
                 }
-            case .failure(let error):
+                case .failure(let error):
                 print(error)
+                }
             }
+        }else {
+            showAlert(title: "Error", message: "Campos vacíos")
         }
-        
         
     }
     
@@ -58,4 +61,13 @@ extension UITextField {
     }
     
    
+}
+
+extension UIViewController {
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let accept = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+        alert.addAction(accept)
+        present(alert, animated: true)
+    }
 }
