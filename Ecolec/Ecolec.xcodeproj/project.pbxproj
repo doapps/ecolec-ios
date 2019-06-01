@@ -16,6 +16,7 @@
 		37B1577422A2D691007E55D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1577322A2D691007E55D9 /* LoginViewController.swift */; };
 		37FD224A22A2DB7700FD825E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FD224922A2DB7700FD825E /* Register.storyboard */; };
 		37FD224C22A2DB8400FD825E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD224B22A2DB8400FD825E /* RegisterViewController.swift */; };
+		37FD224E22A2E0CB00FD825E /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD224D22A2E0CB00FD825E /* CategoriesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		37B1577322A2D691007E55D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		37FD224922A2DB7700FD825E /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		37FD224B22A2DB8400FD825E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		37FD224D22A2E0CB00FD825E /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				37B1577322A2D691007E55D9 /* LoginViewController.swift */,
 				37FD224922A2DB7700FD825E /* Register.storyboard */,
 				37FD224B22A2DB8400FD825E /* RegisterViewController.swift */,
+				37FD224D22A2E0CB00FD825E /* CategoriesCollectionViewCell.swift */,
 			);
 			path = Ecolec;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				37AFEB8E22A2C8DF00E41FE2 /* ViewController.swift in Sources */,
 				37AFEB8C22A2C8DF00E41FE2 /* AppDelegate.swift in Sources */,
 				37FD224C22A2DB8400FD825E /* RegisterViewController.swift in Sources */,
+				37FD224E22A2E0CB00FD825E /* CategoriesCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
