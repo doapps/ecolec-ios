@@ -92,7 +92,7 @@ class ViewController: UIViewController {
                 guard let polyLineString = overview_polyline["points"] as? String else {
                     return
                 }
-                self.drawPath(from: polyLineString)
+                self.drawPath(from: polyLineString, coordinates: CLLocationCoordinate2D.init(latitude: destination.latitude, longitude: destination.longitude))
             }else {
                 print("No hay rutas")
             }
@@ -104,11 +104,13 @@ class ViewController: UIViewController {
         task.resume()
     }
     
-    func drawPath(from polyStr: String){
+    func drawPath(from polyStr: String, coordinates: CLLocationCoordinate2D){
         let path = GMSPath(fromEncodedPath: polyStr)
         let polyline = GMSPolyline(path: path)
         polyline.strokeWidth = 3.0
         polyline.map = mapView // Google MapView
+        let marker = GMSMarker(position: coordinates)
+        marker.map = mapView
     }
 
 }
