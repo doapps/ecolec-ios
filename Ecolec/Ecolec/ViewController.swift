@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         let upSwipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleUp(_:)))
         upSwipeGesture.direction = .up
         messageView.addGestureRecognizer(upSwipeGesture)
+        obtenerPuntos(name: "todos")
     }
 
     @objc func handleUp(_ gesture: UISwipeGestureRecognizer) {
@@ -61,7 +62,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func cerrar(_ sender: Any) {
-        alertView.isHidden = false
+        alertView.isHidden = true
     }
     
     @IBAction func aceptar(_ sender: Any) {
@@ -73,7 +74,7 @@ class ViewController: UIViewController {
         let params = ["id": Data.share.idUser!,
                       "publicacion_id": publicID!,
                       "latitude": 121.1221,
-                      "longitude": 12.2111]
+                      "longitude": 12.2111] as [String : Any]
         Alamofire.request("http://api.sandbox.doapps.pe/ecolec/recolector/aceptar-recojo", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
             switch response.result {
             case .success:
@@ -144,6 +145,7 @@ class ViewController: UIViewController {
     }
     
     func obtenerPuntos(name: String) {
+        mapView.clear()
         var params: [String: Bool]  = [:]
         if name == "todos" {
             print("asdasd")
@@ -236,7 +238,7 @@ extension ViewController: GMSMapViewDelegate {
         alertView.isHidden = false
         let x = pointsDict[marker]
         coordinates = CLLocationCoordinate2D(latitude: x?.latitudCiudadano ?? 0, longitude: x?.longitudCiudadano ?? 0)
-        publicID = x.id
+        publicID = x?.id
         return true
     }
 }

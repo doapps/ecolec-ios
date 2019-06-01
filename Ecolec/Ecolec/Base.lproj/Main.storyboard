@@ -66,11 +66,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbs-Ec-6X3">
                                 <rect key="frame" x="0.0" y="447" width="375" height="220"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dh-1M-2OB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="----------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dh-1M-2OB">
                                         <rect key="frame" x="149" y="8" width="77" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="77" id="Cya-wv-zqH"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Existen 4 zonas para recoger residuos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7s-gH-Cz7">
+                                        <rect key="frame" x="30" y="55" width="315" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -81,20 +87,30 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="And-Ug-NU5"/>
                                     <constraint firstItem="3Dh-1M-2OB" firstAttribute="centerX" secondItem="vbs-Ec-6X3" secondAttribute="centerX" id="EYl-Kc-Y6D"/>
+                                    <constraint firstItem="c7s-gH-Cz7" firstAttribute="top" secondItem="3Dh-1M-2OB" secondAttribute="bottom" constant="26" id="Fbj-As-dOA"/>
+                                    <constraint firstAttribute="trailing" secondItem="c7s-gH-Cz7" secondAttribute="trailing" constant="30" id="J4z-dm-Rrb"/>
                                     <constraint firstItem="3Dh-1M-2OB" firstAttribute="top" secondItem="vbs-Ec-6X3" secondAttribute="top" constant="8" id="NQ1-QE-H6n"/>
+                                    <constraint firstItem="c7s-gH-Cz7" firstAttribute="leading" secondItem="vbs-Ec-6X3" secondAttribute="leading" constant="30" id="oFE-oF-R9s"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cck-sI-66o">
                                 <rect key="frame" x="37.5" y="233.5" width="300" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zu-d6-cUZ">
-                                        <rect key="frame" x="127" y="155" width="46" height="30"/>
+                                        <rect key="frame" x="123" y="155" width="54" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Aceptar"/>
                                         <connections>
                                             <action selector="aceptar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4XH-mf-qqf"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Este Usuario tiene" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZY-s2-Tfx">
+                                        <rect key="frame" x="80.5" y="89.5" width="139" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lac-zt-9Mg">
                                         <rect key="frame" x="131" y="16" width="42" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -103,15 +119,8 @@
                                             <action selector="cerrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9GD-32-wSt"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZY-s2-Tfx">
-                                        <rect key="frame" x="128.5" y="89.5" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.15686274510000001" green="0.14901960780000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="qeg-6w-hIf"/>
                                     <constraint firstAttribute="height" constant="200" id="r2g-jT-BD7"/>
