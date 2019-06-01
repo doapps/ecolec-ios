@@ -13,7 +13,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            nameLabel.textColor = isSelected ? .blue : .black
+            nameLabel.textColor = isSelected ? UIColor(red: 25/255, green: 183/255, blue: 154/255, alpha: 1) : .black
         }
     }
     

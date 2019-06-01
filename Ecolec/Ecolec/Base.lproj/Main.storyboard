@@ -84,6 +84,39 @@
                                     <constraint firstItem="3Dh-1M-2OB" firstAttribute="top" secondItem="vbs-Ec-6X3" secondAttribute="top" constant="8" id="NQ1-QE-H6n"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cck-sI-66o">
+                                <rect key="frame" x="37.5" y="233.5" width="300" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zu-d6-cUZ">
+                                        <rect key="frame" x="127" y="155" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="aceptar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4XH-mf-qqf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lac-zt-9Mg">
+                                        <rect key="frame" x="131" y="16" width="42" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="cerrar"/>
+                                        <connections>
+                                            <action selector="cerrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9GD-32-wSt"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZY-s2-Tfx">
+                                        <rect key="frame" x="128.5" y="89.5" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.14901960780000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="qeg-6w-hIf"/>
+                                    <constraint firstAttribute="height" constant="200" id="r2g-jT-BD7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -97,14 +130,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xrl-TJ-fUB" secondAttribute="trailing" id="fal-wX-JrI"/>
                             <constraint firstItem="vbs-Ec-6X3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jRD-zN-hAx"/>
                             <constraint firstItem="KVW-Yi-zvA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mmX-da-Agd"/>
+                            <constraint firstItem="Cck-sI-66o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nJn-tN-cBB"/>
+                            <constraint firstItem="Cck-sI-66o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tt8-Y6-jFr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="alertView" destination="Cck-sI-66o" id="tNp-2U-P2j"/>
                         <outlet property="categoriesCollectionView" destination="KVW-Yi-zvA" id="mdT-yN-tNc"/>
                         <outlet property="mapView" destination="xrl-TJ-fUB" id="jxa-no-zI3"/>
                         <outlet property="messageHeightConstant" destination="And-Ug-NU5" id="i3h-cE-4yP"/>
                         <outlet property="messageView" destination="vbs-Ec-6X3" id="3oy-wR-jk0"/>
+                        <outlet property="nameLabel" destination="fZY-s2-Tfx" id="xIq-54-mlD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

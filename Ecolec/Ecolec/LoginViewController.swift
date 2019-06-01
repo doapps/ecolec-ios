@@ -26,10 +26,9 @@ class LoginViewController: UIViewController {
     
     @IBAction func openHome(_ sender: UITapGestureRecognizer) {
         print("sadasd")
-        let params = ["email": "nico@gmail.com",
-                      "password": "nico123"]
+        let params = ["email": dniTextField.text ?? "nico@gmail.com",
+                      "password": passwordTextField.text ?? "nico123"]
         Alamofire.request("http://api.sandbox.doapps.pe/ecolec/recolector/login", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
-            
             switch response.result {
             case .success:
                 let data = JSON(response.data!)

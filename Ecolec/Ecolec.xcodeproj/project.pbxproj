@@ -18,6 +18,10 @@
 		37FD224C22A2DB8400FD825E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD224B22A2DB8400FD825E /* RegisterViewController.swift */; };
 		37FD224E22A2E0CB00FD825E /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD224D22A2E0CB00FD825E /* CategoriesCollectionViewCell.swift */; };
 		37FD225022A313C700FD825E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD224F22A313C700FD825E /* Data.swift */; };
+		37FD225422A31BE200FD825E /* GothamBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FD225122A31BE100FD825E /* GothamBold.ttf */; };
+		37FD225522A31BE200FD825E /* GothamLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FD225222A31BE100FD825E /* GothamLight.ttf */; };
+		37FD225622A31BE200FD825E /* GothamMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37FD225322A31BE100FD825E /* GothamMedium.ttf */; };
+		37FD225822A3248200FD825E /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD225722A3248200FD825E /* Points.swift */; };
 		8E00E29F5A43352B2D6AD852 /* Pods_Ecolec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440D099A6B504797643EDCD7 /* Pods_Ecolec.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,10 @@
 		37FD224B22A2DB8400FD825E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		37FD224D22A2E0CB00FD825E /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		37FD224F22A313C700FD825E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		37FD225122A31BE100FD825E /* GothamBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBold.ttf; sourceTree = "<group>"; };
+		37FD225222A31BE100FD825E /* GothamLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamLight.ttf; sourceTree = "<group>"; };
+		37FD225322A31BE100FD825E /* GothamMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamMedium.ttf; sourceTree = "<group>"; };
+		37FD225722A3248200FD825E /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
 		440D099A6B504797643EDCD7 /* Pods_Ecolec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ecolec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1D6176AF7B2F98A6259B68 /* Pods-Ecolec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ecolec.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ecolec/Pods-Ecolec.release.xcconfig"; sourceTree = "<group>"; };
 		833295ADBA0117D04AC0B678 /* Pods-Ecolec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ecolec.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ecolec/Pods-Ecolec.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,10 +89,14 @@
 				37AFEB9722A2C8E100E41FE2 /* Info.plist */,
 				37B1577122A2D66E007E55D9 /* Authentication.storyboard */,
 				37B1577322A2D691007E55D9 /* LoginViewController.swift */,
+				37FD225122A31BE100FD825E /* GothamBold.ttf */,
+				37FD225222A31BE100FD825E /* GothamLight.ttf */,
+				37FD225322A31BE100FD825E /* GothamMedium.ttf */,
 				37FD224922A2DB7700FD825E /* Register.storyboard */,
 				37FD224B22A2DB8400FD825E /* RegisterViewController.swift */,
 				37FD224D22A2E0CB00FD825E /* CategoriesCollectionViewCell.swift */,
 				37FD224F22A313C700FD825E /* Data.swift */,
+				37FD225722A3248200FD825E /* Points.swift */,
 			);
 			path = Ecolec;
 			sourceTree = "<group>";
@@ -171,7 +183,10 @@
 				37AFEB9622A2C8E100E41FE2 /* LaunchScreen.storyboard in Resources */,
 				37AFEB9322A2C8E100E41FE2 /* Assets.xcassets in Resources */,
 				37AFEB9122A2C8E000E41FE2 /* Main.storyboard in Resources */,
+				37FD225522A31BE200FD825E /* GothamLight.ttf in Resources */,
+				37FD225622A31BE200FD825E /* GothamMedium.ttf in Resources */,
 				37FD224A22A2DB7700FD825E /* Register.storyboard in Resources */,
+				37FD225422A31BE200FD825E /* GothamBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +274,7 @@
 				37FD225022A313C700FD825E /* Data.swift in Sources */,
 				37AFEB8E22A2C8DF00E41FE2 /* ViewController.swift in Sources */,
 				37AFEB8C22A2C8DF00E41FE2 /* AppDelegate.swift in Sources */,
+				37FD225822A3248200FD825E /* Points.swift in Sources */,
 				37FD224C22A2DB8400FD825E /* RegisterViewController.swift in Sources */,
 				37FD224E22A2E0CB00FD825E /* CategoriesCollectionViewCell.swift in Sources */,
 			);

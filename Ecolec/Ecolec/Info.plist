@@ -41,6 +41,12 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GothamBold.ttf</string>
+		<string>GothamLight.ttf</string>
+		<string>GothamMedium.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
