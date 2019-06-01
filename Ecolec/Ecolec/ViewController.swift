@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
-import SwiftyJSON
+
 
 class ViewController: UIViewController {
 
@@ -27,8 +27,7 @@ class ViewController: UIViewController {
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         mapView.isMyLocationEnabled = true
-        
-        
+        print("IDUSER \(Data.share.idUser)")
         let downSwipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleDown(_:)))
         downSwipeGesture.direction = .down
         messageView.addGestureRecognizer(downSwipeGesture)
@@ -39,7 +38,7 @@ class ViewController: UIViewController {
 
     @objc func handleUp(_ gesture: UISwipeGestureRecognizer) {
         UIView.animate(withDuration: 0.4) {
-            self.messageHeightConstant.constant = 200
+            self.messageHeightConstant.constant = 220
             self.view.layoutIfNeeded()
         }
         
@@ -47,7 +46,7 @@ class ViewController: UIViewController {
     
     @objc func handleDown(_ gesture: UISwipeGestureRecognizer) {
         UIView.animate(withDuration: 0.4) {
-            self.messageHeightConstant.constant = 50
+            self.messageHeightConstant.constant = 70
             self.view.layoutIfNeeded()
         }
         
@@ -58,7 +57,7 @@ class ViewController: UIViewController {
         let session = URLSession.shared
     
         let url = URL(string: "https://maps.googleapis.com/maps/api/directions/json?origin=-12.1354657,-77.02224&destination=\(destination.latitude),\(destination.longitude)&mode=walking&key=AIzaSyDCK9g4uqPTkM_-BPKAZfvK2BPF7wsoLJM")!
-        print(url)
+//        print(url)
         
         let task = session.dataTask(with: url, completionHandler: {
             (data, response, error) in
@@ -67,8 +66,8 @@ class ViewController: UIViewController {
                 print(error!.localizedDescription)
                 return
             }
-            let json = JSON(data)
-            print(json)
+//            let json = JSON(data)
+//            print(json)
             
             guard let jsonResult = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any], let jsonResponse = jsonResult else {
                 print("error in JSONSerialization")
@@ -78,7 +77,7 @@ class ViewController: UIViewController {
             guard let routes = jsonResponse["routes"] as? [Any] else {
                 return
             }
-            print(routes)
+//            print(routes)
 
             if routes.count > 0 {
                 guard let route = routes[0] as? [String: Any] else {

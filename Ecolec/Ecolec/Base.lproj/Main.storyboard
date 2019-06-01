@@ -64,7 +64,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbs-Ec-6X3">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="447" width="375" height="220"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dh-1M-2OB">
                                         <rect key="frame" x="149" y="8" width="77" height="21"/>
@@ -79,7 +79,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="And-Ug-NU5"/>
+                                    <constraint firstAttribute="height" constant="220" id="And-Ug-NU5"/>
                                     <constraint firstItem="3Dh-1M-2OB" firstAttribute="centerX" secondItem="vbs-Ec-6X3" secondAttribute="centerX" id="EYl-Kc-Y6D"/>
                                     <constraint firstItem="3Dh-1M-2OB" firstAttribute="top" secondItem="vbs-Ec-6X3" secondAttribute="top" constant="8" id="NQ1-QE-H6n"/>
                                 </constraints>
