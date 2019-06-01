@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="OY4-vC-wdF">
+            <objects>
+                <viewController id="TCp-UW-sjZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zzw-to-o4g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KiX-qY-bNz" userLabel="PickNotificationView">
+                                <rect key="frame" x="24" y="158.5" width="327" height="350"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqe-aM-O0i">
+                                        <rect key="frame" x="277" y="0.0" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="3ko-DR-g9o"/>
+                                            <constraint firstAttribute="height" constant="30" id="jRk-hx-7Gi"/>
+                                        </constraints>
+                                        <state key="normal" title="Cerrar"/>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TYW-DX-OLW">
+                                        <rect key="frame" x="98.5" y="40" width="130" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="I49-mo-cjw"/>
+                                            <constraint firstAttribute="width" constant="130" id="OTI-lP-uXk"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hay nuevas solicitudes para reciclar!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUJ-0a-WzT">
+                                        <rect key="frame" x="24" y="202" width="279" height="53"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWe-2o-83f">
+                                        <rect key="frame" x="56" y="287" width="215" height="30"/>
+                                        <state key="normal" title="Recoger"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="4Wo-62-sOw"/>
+                                    <constraint firstAttribute="trailing" secondItem="dUJ-0a-WzT" secondAttribute="trailing" constant="24" id="7sz-k2-dqX"/>
+                                    <constraint firstAttribute="width" constant="327" id="Bjy-3I-ggp"/>
+                                    <constraint firstAttribute="trailing" secondItem="sqe-aM-O0i" secondAttribute="trailing" id="GwD-pa-luD"/>
+                                    <constraint firstItem="dUJ-0a-WzT" firstAttribute="top" secondItem="TYW-DX-OLW" secondAttribute="bottom" constant="32" id="SyQ-D1-UcK"/>
+                                    <constraint firstAttribute="trailing" secondItem="zWe-2o-83f" secondAttribute="trailing" constant="56" id="Tf4-fG-35j"/>
+                                    <constraint firstItem="TYW-DX-OLW" firstAttribute="centerX" secondItem="KiX-qY-bNz" secondAttribute="centerX" id="TjJ-Ic-y6X"/>
+                                    <constraint firstItem="TYW-DX-OLW" firstAttribute="top" secondItem="KiX-qY-bNz" secondAttribute="top" constant="40" id="bHM-cO-xld"/>
+                                    <constraint firstItem="dUJ-0a-WzT" firstAttribute="leading" secondItem="KiX-qY-bNz" secondAttribute="leading" constant="24" id="e7S-mu-5ke"/>
+                                    <constraint firstItem="zWe-2o-83f" firstAttribute="leading" secondItem="KiX-qY-bNz" secondAttribute="leading" constant="56" id="e9S-qf-8ce"/>
+                                    <constraint firstItem="sqe-aM-O0i" firstAttribute="top" secondItem="KiX-qY-bNz" secondAttribute="top" id="flr-ha-MnZ"/>
+                                    <constraint firstItem="zWe-2o-83f" firstAttribute="top" secondItem="dUJ-0a-WzT" secondAttribute="bottom" constant="32" id="kdV-s4-ZQe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KiX-qY-bNz" firstAttribute="centerY" secondItem="zzw-to-o4g" secondAttribute="centerY" id="0cv-b9-icF"/>
+                            <constraint firstItem="KiX-qY-bNz" firstAttribute="centerX" secondItem="zzw-to-o4g" secondAttribute="centerX" id="XDn-Oz-yYQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3MC-1d-Wz6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dXW-W0-zsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60" y="-1.3493253373313345"/>
+        </scene>
+    </scenes>
+</document>
