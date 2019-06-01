@@ -12,6 +12,8 @@
 		37AFEB9122A2C8E000E41FE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AFEB8F22A2C8E000E41FE2 /* Main.storyboard */; };
 		37AFEB9322A2C8E100E41FE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AFEB9222A2C8E100E41FE2 /* Assets.xcassets */; };
 		37AFEB9622A2C8E100E41FE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AFEB9422A2C8E100E41FE2 /* LaunchScreen.storyboard */; };
+		37B1577222A2D66E007E55D9 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B1577122A2D66E007E55D9 /* Authentication.storyboard */; };
+		37B1577422A2D691007E55D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1577322A2D691007E55D9 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		37AFEB9222A2C8E100E41FE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37AFEB9522A2C8E100E41FE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37AFEB9722A2C8E100E41FE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37B1577122A2D66E007E55D9 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		37B1577322A2D691007E55D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				37AFEB9222A2C8E100E41FE2 /* Assets.xcassets */,
 				37AFEB9422A2C8E100E41FE2 /* LaunchScreen.storyboard */,
 				37AFEB9722A2C8E100E41FE2 /* Info.plist */,
+				37B1577122A2D66E007E55D9 /* Authentication.storyboard */,
+				37B1577322A2D691007E55D9 /* LoginViewController.swift */,
 			);
 			path = Ecolec;
 			sourceTree = "<group>";
@@ -122,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B1577222A2D66E007E55D9 /* Authentication.storyboard in Resources */,
 				37AFEB9622A2C8E100E41FE2 /* LaunchScreen.storyboard in Resources */,
 				37AFEB9322A2C8E100E41FE2 /* Assets.xcassets in Resources */,
 				37AFEB9122A2C8E000E41FE2 /* Main.storyboard in Resources */,
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B1577422A2D691007E55D9 /* LoginViewController.swift in Sources */,
 				37AFEB8E22A2C8DF00E41FE2 /* ViewController.swift in Sources */,
 				37AFEB8C22A2C8DF00E41FE2 /* AppDelegate.swift in Sources */,
 			);
@@ -292,7 +300,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ecolec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -311,7 +319,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ecolec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
