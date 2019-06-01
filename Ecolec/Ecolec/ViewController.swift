@@ -13,11 +13,35 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var messageView: UIView!
+    @IBOutlet weak var messageHeightConstant: NSLayoutConstraint!
     
     var categories: [String] = ["Todos", "Carton", "Vidrios", "Plastico", "Metal"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let downSwipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleDown(_:)))
+        downSwipeGesture.direction = .down
+        messageView.addGestureRecognizer(downSwipeGesture)
+        let upSwipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleUp(_:)))
+        upSwipeGesture.direction = .up
+        messageView.addGestureRecognizer(upSwipeGesture)
+    }
+    
+    @objc func handleUp(_ gesture: UISwipeGestureRecognizer) {
+        UIView.animate(withDuration: 0.4) {
+            self.messageHeightConstant.constant = 200
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    
+    @objc func handleDown(_ gesture: UISwipeGestureRecognizer) {
+        UIView.animate(withDuration: 0.4) {
+            self.messageHeightConstant.constant = 50
+            self.view.layoutIfNeeded()
+        }
+        
     }
 
 }

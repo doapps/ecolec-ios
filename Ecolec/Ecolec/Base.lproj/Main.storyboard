@@ -62,14 +62,38 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="5tz-WX-zee"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbs-Ec-6X3">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dh-1M-2OB">
+                                        <rect key="frame" x="149" y="8" width="77" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="77" id="Cya-wv-zqH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="And-Ug-NU5"/>
+                                    <constraint firstItem="3Dh-1M-2OB" firstAttribute="centerX" secondItem="vbs-Ec-6X3" secondAttribute="centerX" id="EYl-Kc-Y6D"/>
+                                    <constraint firstItem="3Dh-1M-2OB" firstAttribute="top" secondItem="vbs-Ec-6X3" secondAttribute="top" constant="8" id="NQ1-QE-H6n"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KVW-Yi-zvA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2xj-lf-QMI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fgl-54-TIp" secondAttribute="bottom" id="CWE-1s-DdZ"/>
+                            <constraint firstItem="vbs-Ec-6X3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DLa-fM-pOB"/>
                             <constraint firstItem="KVW-Yi-zvA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H3D-oy-G55"/>
                             <constraint firstItem="fgl-54-TIp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lws-Gg-m3r"/>
+                            <constraint firstItem="vbs-Ec-6X3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Zp0-mv-Zoq"/>
                             <constraint firstItem="fgl-54-TIp" firstAttribute="top" secondItem="KVW-Yi-zvA" secondAttribute="bottom" id="aH5-8s-oXK"/>
+                            <constraint firstItem="vbs-Ec-6X3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jRD-zN-hAx"/>
                             <constraint firstItem="KVW-Yi-zvA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mmX-da-Agd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fgl-54-TIp" secondAttribute="trailing" id="yvp-uZ-FOM"/>
                         </constraints>
@@ -78,6 +102,8 @@
                     <connections>
                         <outlet property="categoriesCollectionView" destination="KVW-Yi-zvA" id="mdT-yN-tNc"/>
                         <outlet property="mapView" destination="fgl-54-TIp" id="dR2-YG-yjv"/>
+                        <outlet property="messageHeightConstant" destination="And-Ug-NU5" id="i3h-cE-4yP"/>
+                        <outlet property="messageView" destination="vbs-Ec-6X3" id="3oy-wR-jk0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
